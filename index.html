@@ -81,6 +81,53 @@
         display: flex;
         justify-content: center;
     }
+    .mo{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
+    }
+    .imgp{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
+    }
+    .m1{
+        border-color: gray;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 1%;
+        width: 40%;
+        position: absolute;
+        text-align: center;
+        color: white;
+        font-family: setofont;
+    }
+    .m1 li{
+        float: left;
+        margin-right:25px;
+        list-style-type: none;
+        font-size: 25px;
+    }
+    .imgb{
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <html>
 
@@ -93,11 +140,27 @@
     <script>
        $(document).ready(function(){
             $(".sub").slideUp(0)
+            $(".sub2").slideUp(0)
+            $(".imgb").slideUp(0)
             for(i = 0;i<$(".main").length;++i){
                 $(".main:eq("+i+")").click({id:i},function(e){
                     n=e.data.id
                     $(".sub:eq("+n+")").slideToggle();
                     $(".sub:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".mo").length;++i){
+                $(".mo:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".sub2:eq("+n+")").slideToggle();
+                    $(".sub2:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".imgp").length;++i){
+                $(".imgp:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".imgb:eq("+n+")").slideToggle();
+                    $(".imgb:not(:eq(" + n + "))").slideUp();
                 })
             }
             $("#menu").css("width",$(".main").length*100)
@@ -202,29 +265,157 @@
     <div id="自助餐" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">自助餐</div>
-		<p style=font-size:smaller:>不同菜色不同計位方式。</p>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+		    <p style=font-size:smaller:>不同菜色不同計位方式。</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="73.jpg" style="height:30% ;width: 30%;">
+        <img class="img" src="74.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="麵食部" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">麵食部</div>
-		<p style=font-size:smaller:>月底客家好幫手，份量十足菜色便宜。</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>陽春麵  30元</li>
+                    <li>乾麵/油麵  30元</li>
+                    <li>意麵  30元</li>
+                    <li>米粉/冬粉  30元</li>
+                    <li>榨菜肉絲麵/米粉/冬粉  35元</li>
+                    <li>酸菜鴨麵/米粉/冬粉  50元</li>
+                    <li>當歸麵/麵線/米粉/冬粉  30元</li>
+                    <li>當歸鴨麵/麵線/米粉/冬粉  50元</li>
+                    <li>餛飩麵  45元</li>
+                    <li>肉燥拉麵  30元</li>
+                    <li>大碗加15元</li>
+                    <li>滷蛋  10元</li>
+                    <li>貢丸  8元</li>
+                    <li>水餃5個  20元</li>
+                    <li>滷肉飯  25元</li>
+                    <li>肉羹麵/米粉/冬粉  40元</li>
+                    <li>肉羹  30元</li>
+                    <li>魚丸湯  20元</li>
+                    <li>當歸鴨湯  40元</li>
+                    <li>酸菜鴨湯  40元</li>
+                    <li>肝連湯  30元</li>
+                    <li>粉腸湯  20元</li>
+                    <li>餛飩湯  30元</li>
+                    <li>青菜湯  25元</li>
+                    <li>紅燒牛肉燴飯  60元</li>
+                    <li>蠔油豬肉燴飯  50元</li>
+                    <li>咖哩雞肉燴飯  45元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>月底客家好幫手，份量十足菜色便宜。</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="71.jpg" style="height:30% ;width: 30%;">
+        <img class="img" src="72.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="水果果汁" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
-            <div class="text" style=" width: 80px;;height: 80px;">水果果汁</div>
-		<p style=font-size:smaller:>賣有各式各樣當季水果，如果不方便處理水果也賣有切好的水果，
-			適合吃完飯買一份當飯後水果，果汁部分無添加化學藥劑，物美價廉，。冬天會有期間
-			限定的燒仙草及紅豆湯，可以任選三種配料加入，天氣冷時可以暖身子。
-		</p>
+            <div class="text" style=" width: 80px;;height: 80px;">水果果汁飲料</div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+		    <p style=font-size:smaller:>賣有各式各樣當季水果，如果不方便處理水果也賣有切好的水果，
+			    適合吃完飯買一份當飯後水果，果汁部分無添加化學藥劑，物美價廉，。冬天會有期間
+			    限定的燒仙草及紅豆湯，可以任選三種配料加入，天氣冷時可以暖身子。
+		    </p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="75.jpg" style="height:30% ;width: 30%;">
+        <img class="img" src="76.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="巧瑋鬆餅屋" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">巧瑋鬆餅屋</div>
-		<p style=font-size:smaller:>除午晚餐時段會開，下午的時候也會一直開著，特定時節會販賣限定口味。</p>
+		    <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>抹茶  45元</li>
+                    <li>蜂蜜抹茶  45元</li>
+                    <li>蜂蜜奶油  45元</li>
+                    <li>焦糖奶油  45元</li>
+                    <li>草莓奶油  45元</li>
+                    <li>巧克力奶油  45元</li>
+                    <li>巧克力抹茶  45元</li>
+                    <li>巧克力椰香  45元</li>
+                    <li>巧克力花生  45元</li>
+                    <li>花生芝麻  50元</li>
+                    <li>抹茶紅豆  50元</li>
+                    <li>紅豆煉乳  50元</li>
+                    <li>紅豆鮮奶油  60元</li>
+                    <li>黑糖麻糬+紅豆  80元</li>
+                    <li>葡萄奶酥  55元</li>
+                    <li>蔓越莓奶酥  60元</li>
+                    <li>蔓越莓鮮奶油  60元</li>
+                    <li>蜂蜜鮮奶油  50元</li>
+                    <li>焦糖鮮奶油  50元</li>
+                    <li>抹茶鮮奶油  50元</li>
+                    <li>巧克力鮮奶油  50元</li>
+                    <li>藍莓鮮奶油  50元</li>
+                    <li>芋頭泥鮮奶油  50元</li>
+                    <li>玉米蔬菜  40元</li>
+                    <li>起司蔬菜  50元</li>
+                    <li>鮪魚  50元</li>
+                    <li>培根  55元</li>
+                    <li>燻雞  55元</li>
+                    <li>勁辣雞  55元</li>
+                    <li>紐奧良雞  55元</li>
+                    <li>照燒豬  55元</li>
+                    <li>德州烤雞腿  60元</li>
+                    <li>韓式辣味雞腿  65元</li>
+                    <li>比那滋培根起司  70元</li>
+                    <li>厚切沙朗牛肉  85元</li>
+                    <li>藍莓黑可可 50元</li>
+                    <li>蜂蜜黑可可  50元</li>
+                    <li>巧克力黑可可  50元</li>
+                    <li>蔓越莓黑可可  55元</li>
+                    <li>黑可可鮮奶油  60元</li>
+                    <li>黑可可卡士達  65元</li>
+                    <li>酷奇脆鬆餅  65元</li>
+                    <li>冰淇淋黑可可  90元</li>
+                    <li>原味起司  50元</li>
+                    <li>藍莓起司  50元</li>
+                    <li>黑眼豆豆  55元</li>
+                    <li>巧克力香蕉  60元</li>
+                    <li>黑糖麻糬  60元</li>
+                    <li>卡士達oreo  60元</li>
+                    <li>芋頭卡士達  60元</li>
+                    <li>巧克力卡士達  60元</li>
+                    <li>抹茶卡士達  60元</li>
+                    <li>藍莓卡士達  60元</li>
+                    <li>冰淇淋  80元</li>
+                    <li>紅茶  15元</li>
+                    <li>冬瓜茶  15元</li>
+                    <li>無糖綠茶  20元</li>
+                    <li>伯爵奶茶  25元</li>
+                    <li>茉香奶綠  25元</li>
+                    <li>冬瓜鮮奶  40元</li>
+                </ul>  
+            </div>
+            <p style=font-size:smaller:>除午晚餐時段會開，下午的時候也會一直開著，特定時節會販賣限定口味。</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="79.jpg" style="height:30% ;width: 30%;">
     </div>
 </body>
 
